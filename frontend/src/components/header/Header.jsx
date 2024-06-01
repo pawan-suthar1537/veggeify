@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DesktopNav from "./DesktopNav";
+import MobileNav from "../MobileNav";
 
 const Header = () => {
   const [hideleft, sethideleft] = useState("-left-[1000px]");
@@ -18,7 +19,14 @@ const Header = () => {
       <div className="max-[900px]:hidden">
         <DesktopNav menu={menu} />
       </div>
-      <div className="min-[900px]:hidden">Mobile</div>
+      <div className="min-[900px]:hidden">
+        <MobileNav
+          menu={menu}
+          onclose={onclose}
+          hideleft={hideleft}
+          onopen={onopen}
+        />
+      </div>
     </>
   );
 };
