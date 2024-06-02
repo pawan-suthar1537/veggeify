@@ -7,16 +7,16 @@ const Hero = () => {
         A blog template made influcencers
       </h1>
       <form
-        action="/serch"
+        action="/search"
         className="bg-white p-4 rounded relative flex items-center"
       >
-        <IoSearchOutline clssName="w-10 h-5  text-primary " size={20} />
+        <IoSearchOutline className="w-10 h-5  text-primary " size={20} />
         <input
           className="outline-none ml-4 w-full placeholder:text-[#1b2629]"
-          type="serch"
+          type="search"
           name="query"
-          placeholder="Serch for a recepie"
-          id="serch"
+          placeholder="Search for a recepie"
+          id="search"
           required=""
         />
       </form>

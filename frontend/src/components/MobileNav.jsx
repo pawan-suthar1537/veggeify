@@ -10,14 +10,14 @@ const MobileNav = ({ onclose, hideleft, onopen, menu }) => {
         <span className="logo">Veggify</span>
       </a>
       <button onClick={onopen} className="border border-primary rounded">
-        <HiBars3BottomLeft clssName="w-10 h-10" size={38} />
+        <HiBars3BottomLeft className="w-10 h-10" size={38} />
       </button>
       <div
         className={`transition-all w-full h-full fixed bg-primary z-50 top-0 ${hideleft} flex justify-center items-center`}
       >
         
         <button onClick={onclose} className="absolute top-32 right-8">
-          <RiCloseCircleLine clssName="w-7 h-7 " size={38} />
+          <RiCloseCircleLine className="w-7 h-7 " size={38} />
         </button>
         <div className="">
         <span className="logo absolute  top-32">Veggify</span>
