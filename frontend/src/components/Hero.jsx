@@ -10,7 +10,7 @@ const Hero = () => {
         action="/search"
         className="bg-white p-4 rounded relative flex items-center"
       >
-        <IoSearchOutline className="w-10 h-5  text-primary " size={20} />
+        <IoSearchOutline className="w-10 h-5  text-black " size={20} />
         <input
           className="outline-none ml-4 w-full placeholder:text-[#1b2629]"
           type="search"

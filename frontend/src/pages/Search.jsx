@@ -58,7 +58,7 @@ const Search = () => {
         Search
       </h1>
       <div className="bg-white p-4 rounded relative flex items-center md:max-w-3xl mx-auto">
-        <IoSearchOutline className="w-10 h-5 text-primary" size={20} />
+        <IoSearchOutline className="w-10 h-5 text-black" size={20} />
         <input
           onChange={handleSearchChange}
           className="outline-none ml-4 w-full placeholder:text-[#1b2629]"

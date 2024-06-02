@@ -23,7 +23,7 @@ function CategoryItem({ name, href, background, color }) {
 
 function CategoryList() {
   return (
-    <div className=" flex flex-wrap items-center justify-center gap-8">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-8 ">
       <CategoryItem
         name="entress"
         href="/categories/entress"

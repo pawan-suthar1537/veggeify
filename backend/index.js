@@ -17,8 +17,10 @@ app.get("/", (req, res) => {
 
 
 const itemRouter = require("./routes/itemroute")
+const categoryRouter = require("./routes/categoryroute")
 
 app.use("/api/items", itemRouter);
+app.use("/api/category", categoryRouter);
 
 connectDB()
   .then(() => {
