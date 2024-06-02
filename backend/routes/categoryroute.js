@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get("/:category", async (req, res) => {
     const { category } = req.params;
-    console.log(category);
+    // console.log(category);
 
     try {
         // Find the category document based on the category name
