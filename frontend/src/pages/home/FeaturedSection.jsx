@@ -22,7 +22,7 @@ const FeaturedSection = () => {
         <p className="text-xl mt-4 text-[#5c5c5c]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat architecto nemo ipsa vitae eligendi error officia sed fugiat cum accusamus?</p>
         <div className="lg:mt-0 lg:flex-shrink-0">
             <div className="mt-12 inline-flex">
-                <button className="py-4 px-8 hover:bg-btncolor text-secondary hover:text-white w-full transition ease-in duration-200 text-center text-base font-semibold focus:outline-none border border-black rounded-lg">View Recepie</button>
+                <button className="py-4 px-8 hover:bg-btncolor text-secondary hover:text-white w-full transition ease-in duration-200 text-center text-base font-semibold focus:outline-none border border-black rounded-lg">View recipes</button>
             </div>
         </div>
       </div>

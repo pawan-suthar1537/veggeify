@@ -1,6 +1,9 @@
 import Hero from "../../components/Hero";
 import CategoryWrapper from "../category/CategoryWrapper";
+import AboutSection from "./AboutSection";
+import CompanySlice from "./CompanySlice";
 import FeaturedSection from "./FeaturedSection";
+import LatestRecepies from "./LatestRecepies";
 
 const Home = () => {
   return (
@@ -11,6 +14,9 @@ const Home = () => {
       </div>
       {/* others  */}
       <FeaturedSection/>
+      <LatestRecepies/>
+      <AboutSection/>
+      <CompanySlice/>
     </div>
   );
 };
