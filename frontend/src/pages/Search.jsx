@@ -1,3 +1,5 @@
+// Search.jsx
+
 import React, { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { useParams } from "react-router-dom";

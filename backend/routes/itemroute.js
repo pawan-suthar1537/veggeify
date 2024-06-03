@@ -37,33 +37,20 @@ router.post("/", async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-    try {
-      const { q } = req.query;
-  
-      let items;
-  
-      if (q) {
-        // Search items by name using regex
-        items = await Item.find({ name: { $regex: q, $options: 'i' } });
-      } else {
-        return res.status(400).json({
-          status: 'error',
-          message: 'Bad Request: Query parameter "q" is required',
-        });
-      }
-  
-      res.status(200).json({
-        status: 'success',
-        data: items,
-      });
-    } catch (error) {
-      res.status(400).json({
-        status: 'error',
-        message: 'Bad Request: Unable to retrieve items',
-        error: error.message,
-      });
+  try {
+    const { q } = req.query;
+    let query = {};
+
+    if (q) {
+      query = { name: { $regex: new RegExp(q, 'i') } }; // Case-insensitive search by item name
     }
-  });
+
+    const items = await Item.find(query);
+    res.status(200).json({ data: items });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 //get one by id
 router.get('/:id', async (req, res) => {
