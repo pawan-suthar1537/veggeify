@@ -9,6 +9,7 @@ import Search from "./pages/Search.jsx";
 import Singleproduct from "./pages/products/Singleproduct.jsx";
 import Recipes from "./pages/products/Recipes.jsx";
 import About from "./pages/about/About.jsx";
+import Contactus from "./pages/contact/Contactus.jsx";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contactus />,
       },
     ],
   },
