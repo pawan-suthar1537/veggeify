@@ -26,7 +26,7 @@ const MobileNav = ({ onclose, hideleft, onopen, menu }) => {
                 
               <li key={index}>
                 
-                <Link
+                <Link onClick={onclose}
                   className="font-medium capitalize text-secondary text-2xl"
                   to={item}
                 >
