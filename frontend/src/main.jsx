@@ -7,6 +7,8 @@ import Errorpage from "./components/Errorpage.jsx";
 import Categorypage from "./pages/category/Categorypage.jsx";
 import Search from "./pages/Search.jsx";
 import Singleproduct from "./pages/products/Singleproduct.jsx";
+import Recipes from "./pages/products/Recipes.jsx";
+import About from "./pages/about/About.jsx";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
         path: "/item/:id",
         element: <Singleproduct />,
         loader:({params}) => fetch(`${apiUrl}/api/items/${params.id}`),
+      },
+      {
+        path: "/recipes",
+        element: <Recipes />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
