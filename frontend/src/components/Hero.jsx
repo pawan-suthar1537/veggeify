@@ -2,9 +2,9 @@ import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 const Hero = () => {
   return (
-    <div className="px-5 xl:px-10 md:w-1/2 mb-10">
+    <div className="px-5 xl:px-10 md:w-2/3 mb-10">
       <h1 className="mt-6 mb-10 text-4xl xl:text-6xl text-center font-bold text-[#2A3342] leading-normal xl:leading-relaxed">
-      Recipe Magic: Transforming Ingredients into Masterpieces
+      Savor Every Moment: Explore, Cook, Enjoy
       </h1>
       <form
         action="/search"
