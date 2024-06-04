@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="px-5 xl:px-10 md:w-1/2 mb-10">
       <h1 className="mt-6 mb-10 text-4xl xl:text-6xl text-center font-bold text-[#2A3342] leading-normal xl:leading-relaxed">
-        A blog template made influcencers
+      Recipe Magic: Transforming Ingredients into Masterpieces
       </h1>
       <form
         action="/search"
