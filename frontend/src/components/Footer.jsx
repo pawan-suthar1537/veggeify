@@ -60,8 +60,7 @@ const Footer = () => {
             </div>
 
             <p className="mt-4 max-w-xs text-gray-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+            From our kitchen to yours, with love and sustainability in every bite.
             </p>
 
             <ul className="mt-8 flex gap-6">

@@ -8,9 +8,11 @@ const AboutSection = () => {
           {/* text div */}
           <div className="text-start sm:w-1/2">
             <h2 className="text-4xl font-semibold text-secondary sm:text-5xl sm:leading-relaxed">
-                Vegan foodie who loves to experimnt with recipes
+            Meet Our Vegan Food Enthusiast
+
+
             </h2>
-            <p className="text-xl mt-4 text-[#5c5c5c]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ea esse qui quasi eligendi corporis aut debitis illum magnam id ullam et, officia sapiente sunt eveniet amet assumenda. Accusantium, quam quos? Animi, placeat ea ipsa ex exercitationem earum perferendis fuga sequi facilis officiis reiciendis perspiciatis voluptates rem neque, ducimus possimus.</p>
+            <p className="text-xl mt-4 text-[#5c5c5c]">Welcome to our culinary haven, where plant-based innovation meets delicious simplicity. Our resident vegan foodie is passionate about exploring and creating delightful recipes that cater to both seasoned vegans and those new to the lifestyle. With a love for experimenting in the kitchen, each dish is a testament to the endless possibilities of vegan cooking. From nutritious meals to indulgent treats, our recipes are designed to inspire and satisfy. Join us on this flavorful journey and discover the joy of plant-based eating. Click below to dive into our collection and start your culinary adventure today!</p>
             <div className="lg:mt-0 lg:flex-shrink-0">
                 <div className="mt-12 inline-flex">
                     <button className="py-4 px-8 bg-btncolor text-white hover:text-white w-full transition ease-in duration-200 text-center text-base font-semibold focus:outline-none border border-black rounded-lg">View recipes</button>
