@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
     let query = {};
 
     if (q) {
-      query = { name: { $regex: new RegExp(q, 'i') } }; // Case-insensitive search by item name
+      query = { name: { $regex: new RegExp('^' + q, 'i') } }; 
     }
 
     const items = await Item.find(query);

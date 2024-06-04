@@ -1,11 +1,12 @@
-// Search.jsx
-
 import React, { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { useParams } from "react-router-dom";
+import { mirage } from "ldrs";
 import axios from "axios";
 import Card from "../components/Card";
 const apiUrl = import.meta.env.VITE_API_URL;
+
+mirage.register();
 
 const Search = () => {
   const { query: queryParam } = useParams();
@@ -29,11 +30,11 @@ const Search = () => {
 
     const timeout = setTimeout(() => {
       fetchItems();
-    }, 500); // Adjust the delay as needed (e.g., 500ms)
+    }, 500);
 
     setTypingTimeout(timeout);
 
-    return () => clearTimeout(timeout); // Clean up function to clear timeout on unmount or dependency change
+    return () => clearTimeout(timeout);
   }, [query]);
 
   const fetchItems = async () => {
@@ -42,7 +43,10 @@ const Search = () => {
       const response = await axios.get(`${apiUrl}/api/items`, {
         params: { q: query },
       });
-      setResult(response.data.data);
+      const filteredResults = response.data.data.filter((item) =>
+        item.name.toLowerCase().startsWith(query.toLowerCase())
+      );
+      setResult(filteredResults);
     } catch (error) {
       console.log("Error fetching items:", error.message);
     } finally {
@@ -73,9 +77,14 @@ const Search = () => {
           required
         />
       </div>
-      {
-        loading && <div>loading...</div>
-      }
+      {loading && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-white/70 z-50">
+          
+           
+            <l-mirage size="60" speed="2.5" color="black"></l-mirage>
+          
+        </div>
+      )}
 
       <ul className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {result.map((item) => (
